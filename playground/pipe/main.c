@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <fcntl.h>
 
 int main() {
 	int pipefd[2]; //0が読み取り用、1が書き込み用
