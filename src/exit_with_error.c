@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   perse_input.c                                      :+:      :+:    :+:   */
+/*   exit_with_error.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tomsato <tomsato@student.42.jp>            +#+  +:+       +#+        */
+/*   By: tomsato <tomsato@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/21 13:19:57 by tomsato           #+#    #+#             */
-/*   Updated: 2025/03/21 13:48:38 by tomsato          ###   ########.fr       */
+/*   Created: 2025/03/22 23:08:59 by tomsato           #+#    #+#             */
+/*   Updated: 2025/03/22 23:09:12 by tomsato          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pipex.h"
 
-/*
-Take an array and an index as arguments.
-Convert the selected element into the format required by execve.
-This can be easily achieved using split.
-*/
-
-char	**get_execve_argv(char **av, size_t index)
+void	exit_with_error(char *error)
 {
-	const char** result = ft_split(av[index], ' ');
-	return result;
+	perror(error);
+	exit(EXIT_FAILURE);
 }

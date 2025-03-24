@@ -3,6 +3,10 @@
 		"system_error": "c",
 		"stdio.h": "c",
 		"string.h": "c",
-		"wait.h": "c"
-	}
+		"wait.h": "c",
+		"cstdlib": "c",
+		"unistd.h": "c",
+		"stdlib.h": "c"
+	},
+	"C_Cpp.errorSquiggles": "disabled"
 }
