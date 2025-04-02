@@ -6,7 +6,7 @@
 /*   By: tomsato <tomsato@student.42.jp>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 17:10:13 by tomsato           #+#    #+#             */
-/*   Updated: 2025/03/26 18:09:47 by tomsato          ###   ########.fr       */
+/*   Updated: 2025/04/02 22:01:05 by tomsato          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	iterative_piping(int ac, char **av, char **envp)
 
 	prev_pipe_read = open(av[1], O_RDONLY);
 	if (prev_pipe_read == -1)
-		exit_with_error("open infile");
+		exit_with_error(av[1]);
 	prev_pipe_read = process_middle_cmd(av, ac, envp, prev_pipe_read);
 	pid = create_fork();
 	if (pid == 0)
