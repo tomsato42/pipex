@@ -6,7 +6,7 @@
 /*   By: tomsato <tomsato@student.42.jp>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 00:21:51 by tomsato           #+#    #+#             */
-/*   Updated: 2025/04/02 22:41:34 by tomsato          ###   ########.fr       */
+/*   Updated: 2025/04/02 23:01:20 by tomsato          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ static void	execute_with_path(char **execve_argv, char **envp)
 	}
 	if (execve(full_path, execve_argv, envp) == -1)
 	{
-		fprintf(stderr, "execve[%s]\n", execve_argv[0]);
 		free(full_path);
 		ft_free_split(execve_argv);
 		exit_with_error("execve");
